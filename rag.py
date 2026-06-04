@@ -44,6 +44,9 @@ def _get_embeddings() -> HuggingFaceEmbeddings:
     return HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
 
 
+import streamlit as st
+
+@st.cache_resource
 def get_vector_store() -> FAISS:
     if not Path(FAISS_INDEX_DIR).exists():
         ingest()

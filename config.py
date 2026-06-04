@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent
 UPWORK_API_DOC_PATH = Path(
     os.getenv(
         "UPWORK_API_DOC_PATH",
-        r"C:\Users\hp\Desktop\ProAnalyst_assignment\API Documentation Partial.pdf",
+        BASE_DIR / "data" / "API Documentation Partial.pdf"
     )
 )
 FAISS_INDEX_DIR = Path(os.getenv("FAISS_INDEX_DIR", BASE_DIR / ".faiss_index"))
